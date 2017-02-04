@@ -1,0 +1,217 @@
+/*---reset end---*/
+
+
+
+.xclmMenuHidden
+{
+	visibility: hidden;
+}
+
+#menu ul li div.xclmMenuHidden 	{
+	display: none;
+	}
+
+
+/* ------ XCLM 3.0 ----------- */
+
+#canvas
+{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.xclmHidden
+{
+    display: none;
+}
+
+/* Окно с крутилкой */
+.xclmLoader
+{
+    background-color: #000000;
+    opacity: 0.7;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    z-index: 50000;
+    width: 70%;
+    height: 70%;
+    color: #a8a8a8;
+}
+
+.xclmLoader div
+{
+    padding-top: 150px;
+}
+
+/* Конец окна с крутилкой */
+
+/* Окно с ошибками */
+#error_panel {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: #e8e8e8;
+    z-index: 55000;
+    padding: 15px;
+}
+
+#errors li.error {
+    color: #a92222;
+}
+
+#errors li i {
+    color: #333;
+    font-size: 8pt;
+}
+
+#error_toggler {
+    top: 0px;
+    position: absolute;
+    left: 97%;
+    width: 32px;
+    height: 32px;
+    z-index: 55000;
+    border: 1px solid red;
+}
+
+
+
+/* Подсвечиваем фон в режиме отладки */
+.localdebug {
+    background-color: #fccf91;
+}
+
+/* end */
+
+
+/** Размеры начала визита */
+
+.xclmTable {
+    font-size: 14pt;
+}
+
+.xclmDistance
+{
+    font-size: 12pt;
+    color: orange;
+}
+
+#xclmTodayClientsEmpty
+{
+    font-size: 20pt;
+    padding-top: 50px;
+    padding-left: 100px;
+    color: #444;
+}
+
+.xclmAimLabel
+{
+    font-size: 12pt;
+    line-height: 22px !important;
+}
+
+.xclmBackBtn
+{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.xclmActBtn
+{
+    margin-right: 10px;
+    margin-top: 20px;
+
+}
+
+.xclmAim
+{
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    margin: 20px;
+    position: relative !important;
+}
+
+a.xclmBtn
+{
+    font-size: 14pt;
+}
+
+.nav-tabs li a
+{
+    font-size: 14pt;
+}
+
+a#btnVisitStart
+{
+    width: 100%;
+}
+
+.xclmCheckbox
+{
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    margin: 20px;
+    position: relative !important;
+    padding-left: 20px;
+    padding-top: 13px;
+}
+
+.xclmCheckboxLabel
+{
+    font-size: 12pt;
+    line-height: 22px !important;
+}
+
+/* Всплывающее окно */
+.md-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    max-width: 630px;
+    min-width: 320px;
+    height: auto;
+    z-index: 2000;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.md-show {
+    visibility: visible;
+}
+
+.md-content {
+    color: #eee;
+    text-align: center;
+    padding: 50px;
+    background: #666;
+    position: relative;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+/* Зоны с вертикальной прокруткой  */
+
+.xclmScrollableVContainer {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-bottom: 250px;
+}
+
+/* Конец Зоны с вертикальной прокрутк
+ой */

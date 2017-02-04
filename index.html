@@ -1,0 +1,204 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+				 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<script language="JavaScript" src="core/js/jquery-2.1.1.min.js?8b0bc30d9bdfc389526361019dec7736" type="text/javascript"></script>
+    <script language="JavaScript" src="core/js/xclm.fileSend.js?8b0bc30d9bdfc389526361019dec7737" type="text/javascript"></script>
+    <script language="JavaScript" src="core/js/touchy.js?20bbc34fd9b881837a157e65da49c13b" type="text/javascript"></script>
+	<script language="JavaScript" src="core/js/xclm.nav.js?6831308fc7d1d967c2d83fe372cf838e" type="text/javascript"></script>
+	<script language="JavaScript" src="core/js/xclm.menu.js?8d4f7e4c15f6d61285450cf2f16ccb5a" type="text/javascript"></script>
+	<script language="JavaScript" src="core/js/xclm.actions.js?f1981151cafef9c86975094ef0a8e113" type="text/javascript"></script>
+	<script language="JavaScript" src="core/js/xclm.swipe.js?9f323e8c858a32a1dc23fce0f844e4f6" type="text/javascript"></script>
+	<script language="JavaScript" src="core/js/xclm.events.js?b29c5dd5f77158dd6abb9b8222c5b8ba" type="text/javascript"></script>
+	<script language="JavaScript" src="core/js/xclm.data.js?a4e4fdece3c3ef0af34ad38c4b147dc6" type="text/javascript"></script>
+	<script language="JavaScript" src="core/js/xclm.profiling.js?e3a38d6fec26afd110c96f6b722a7955" type="text/javascript"></script>
+	<script language="JavaScript" src="core/js/xclm.popup.js?076a45d49e9cec4bd4a28c77fc43d848" type="text/javascript"></script>
+	<script language="JavaScript" src="core/js/xclm.stat.js?90043476240d5b49d649fd409509c1bd" type="text/javascript"></script>
+    <script language="JavaScript" src="core/js/xclm.visit.js" type="text/javascript"></script>
+    <script language="JavaScript" src="core/js/xclm.utils.js" type="text/javascript"></script>
+	<script language="JavaScript" src="core/js/xclm.js" type="text/javascript"></script>
+    <script language="JavaScript" src="core/js/xclm.recursive.worker.js" type="text/javascript"></script>
+	<script language="JavaScript" src="core/js/xclm.app.js?2de02510bd2847fdc955501b04974597" type="text/javascript"></script>
+    <script language="JavaScript" src="core/js/xclm.start.js" type="text/javascript"></script>
+	<script language="JavaScript" src="core/js/iosbridge.js?457b425608738630835454029b976e6e" type="text/javascript"></script>
+	<script language="JavaScript" src="app.js?09684053f88595f0c107f587bc4c1fd4" type="text/javascript"></script>
+    <script language="JavaScript" src="core/js/xclm.database.js" type="text/javascript"></script>
+	<link href="core/css/xclm.css" rel="stylesheet" />
+    <link href="app.css?96d87e6a935de39219d889cecf0e1610" rel="stylesheet">
+    <script language="JavaScript" src="core/js/xclm.start.js" type="text/javascript"></script>
+<!-- 	<link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css" /> -->
+</head>
+
+<body id="touch-me">
+
+
+<div class="xclmSlideBuilder">
+</div>
+
+<div class="xclmSF xclmModeSelect">
+    <div class="container">
+        <br /><br /><br /><br />
+        <div class="row">
+            <div class="col-md-9">
+            </div>
+
+            <div class="xclmUserName col-md-3">
+                <p id="xclm_username">Шемятенков Игорь</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <img id="xclmLogo" class="xclmImgLogo thumbnail" width="200" height="150" />
+                <a id="xclmStartPresentationVisit" href="#" class="btn btn-primary btn-large xclmBtn">Начать визит</a><br /><br />
+                <a id="xclmStartPresentationView" href="#" class="btn btn-primary btn-large xclmBtn">Самостоятельный просмотр</a><br /><br />
+                <hr />
+                <a href="#" class="xclmExitBtn btn btn-primary btn-large xclmBtn">К списку презентаций</a>
+            </div>
+            <div class="col-md-9">
+                <h1 id="xclmTitle">Название презентации</h1>
+                <p id="xclmDescr">Описание презентации</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="xclmSF xclmClientSelect xclmHidden">
+    <div class="container">
+        <div class="navbar-fixed-top" style="background-color: #ffffff;">
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="#" class="xclmClientFormBackBtn xclmBackBtn btn btn-primary btn-large xclmBtn">Назад</a><br />
+                </div>
+                <div class="col-md-8">
+                    <h1>Выберите клиента</h1>
+                </div>
+                <div class="col-md-3">
+                    <a href="#" class="pull-right xclmClientAdd xclmActBtn btn btn-primary btn-large xclmBtn">Добавить клиента</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="padding-top: 20px;">
+                <div>
+                    <a class="btn btn-primary pull-right" id="refresh_gps"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp; Обновить GPS</a>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#routing_tab" aria-controls="home" role="tab" data-toggle="tab">Маршрутный план</a></li>
+                        <li role="presentation"><a href="#all_tab" aria-controls="profile" role="tab" data-toggle="tab">Все клиенты</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="scroll_container xclmScrollableVContainer unBlockTouchMove">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="routing_tab">
+                            <table id="xclmTodayClientsTab" class="table table-striped xclmTable">
+                            </table>
+                            <span id="xclmTodayClientsEmpty" class="xclmHidden"></span>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="all_tab">
+                            <table id="xclmAllClientsTab" class="table table-striped xclmTable">
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="xclmSF xclmContactSelect xclmHidden">
+    <div class="container">
+        <div class="navbar-fixed-top" style="background-color: #ffffff;">
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="#" class="xclmContactFormBackBtn xclmBtn xclmBackBtn btn btn-primary btn-large">Назад</a>
+                </div>
+                <div class="col-md-8">
+                    <h1>Выберите контактное лицо</h1>
+                </div>
+                <div class="col-md-3">
+                    <a href="#" class="pull-right xclmContactAdd xclmActBtn btn btn-primary btn-large xclmBtn">Добавить контактное лицо</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="padding-top: 20px;">
+                <table id="xclmContactList" class="table table-striped xclmTable">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="xclmSF xclmAimSelect xclmHidden">
+    <div class="container">
+        <div class="navbar-fixed-top" style="background-color: #ffffff;">
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="#" class="xclmAimFormBackBtn xclmBackBtn xclmBtn btn btn-primary btn-large">Назад</a><br /><br />
+                </div>
+                <div class="col-md-11">
+                    <h1>Укажите цели визита</h1>
+                    <p id="visit_details"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="xclmVisitAims" class="col-md-12" style="padding-top: 100px;">
+            </div>
+            <p>Комментарий:</p>
+            <textarea class="form-control" cols="7" id="xclmVisitComment"></textarea>
+            <br />
+            <a href="#" id="btnVisitStart" class="btn xclmBtn btn-primary">Начать визит</a>
+        </div>
+    </div>
+</div>
+
+<div class="xclmPresentation xclmHidden">
+    <div id="menudiv" class="xclmMenuDiv">
+        <ul id="menu" class="xclmMenu">
+        </ul>
+        <div id="xclmBreadCrumbs"></div>
+    </div>
+
+    <div id="canvas" class="xclmCanvas">
+  </div>
+</div>
+
+<div class="xclmLoader xclmHidden">
+    <div>
+        <img src="core/img/loader.gif" width="100" height="100"/>
+        <p id="xclmLoaderMessage">Загрузка данных...</p>
+    </div>
+</div>
+
+
+<div class="md-modal md-effect-14" id="modal-14">
+    <div class="md-content">
+        <h3 id="xclmPopupMessage">Сохранение данных</h3>
+    </div>
+</div>
+
+
+<div id="error_panel" class="xclmHidden">
+    <h4>Отладочная панель</h4>
+    <ul id="errors">
+
+    </ul>
+</div>
+
+<div id="error_toggler">
+</div>
+
+<script src="bootstrap/bootstrap.min.js"></script>
+<script>
+    $(function() {
+        xclm.init();
+    });
+  </script>
+  </body>
+</html>
